@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start":"nodemon index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,8 @@
   "homepage": "https://github.com/AdityaSharma224/RestAPI_CRUD#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "exxpress": "^1.0.0"
+    "exxpress": "^1.0.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
