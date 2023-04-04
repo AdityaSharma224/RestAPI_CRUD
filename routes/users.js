@@ -7,18 +7,20 @@ import {
   deleteUser,
   updateUser,
 } from "../controllers/users.js";
+
+
 const router = express.Router();
 
 
 
-router.get("/", getUsers);
+router.get('/', getUsers);
 
-router.post("/", createUser);
+router.post('/', createUser);
 
-router.get("/:id", getUser);
+router.get('/:id', getUser);
 
-router.delete("/:id", deleteUser);
+router.delete('/:id', deleteUser);
 
-router.patch("/:id", updateUser);
+router.patch('/:id', updateUser);
 
 export default router;
