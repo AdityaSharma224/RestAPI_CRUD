@@ -1,17 +1,24 @@
-import express from 'express';
-import {v4 as uuidV4} from 'uuid';
-const  router = express.Router();
+import express from "express";
 
-const users = [];
-router.get('/',(req,res)=>{
-    res.send(users);
-});
+import {
+  createUser,
+  getUsers,
+  getUser,
+  deleteUser,
+  updateUser,
+} from "../controllers/users.js";
+const router = express.Router();
 
-router.post('/',(req,res)=>{
-    
-    const user = req.body;
-    users.push({...user,id:uuidV4()});
-    res.send(`POST ROUTE REACHED${user.firstName} added to the database!`)
-})
+
+
+router.get("/", getUsers);
+
+router.post("/", createUser);
+
+router.get("/:id", getUser);
+
+router.delete("/:id", deleteUser);
+
+router.patch("/:id", updateUser);
 
 export default router;
